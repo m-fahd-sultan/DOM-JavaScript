@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <div id="test"></div>
+        <button type="button" onclick="stop()">Stop Animation</button>
+        <style>
+            #test{
+                width: 500px;
+                height: 100px;
+                background-color: gray;
+            }
+        </style>
+
+    <script>
+        // var id=setTimeout(anim,1000);  //use to start animation after specific time;
+        // function anim(){
+        //     var target=document.getElementById("test");  
+        //     target.style.width="800px";
+        // }
+        /*****\\\Using Inbuild Function///*****/
+        var id=setTimeout(function (){
+            var target=document.getElementById("test");  
+            target.style.width="800px";
+        }, 1000)
+        //This animation runs one time to stop it while runing we use clearTimeout;
+        
+        function stop(){
+            clearTimeout(id);//If we press the button before 1sec then the animation can't run;
+            console.log(id);
+        }
+
+
+
+
+    </script>
+</body>
+</html>

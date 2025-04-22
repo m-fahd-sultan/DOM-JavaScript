@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="submitfctn()">
+
+        <label for="Name" >Name</label><br>
+        <input type="text" id="fname" onchange="changefunction(this)" onselect="fahad()" >
+        <br>
+
+
+        <label for="class">Class</label><br>
+        <input type="text"  onchange="changefunction(this)">
+        <br>
+
+        <label for="Email">Email</label><br>
+        <input type="Emai" id="email" required onchange="changefunction(this)" oninvalid="alert('Please enter correct email id')">
+        <br>
+        
+
+        <label for="coutry">Country</label><br>
+        <select name="Option" id=""  onchange="changefunction(this)">
+            <option value="Pakistan">Pakistan</option>
+            <option value="India">India</option>
+            <option value="China">China</option>
+            <option value="Iran">Iran</option>
+        </select>
+
+
+        <button type="submit">submit</button>
+    </form>
+
+  
+    <div id="test" style="border: 1px solid red; height: 150px;" ></div>
+
+    <script>
+     function changefunction(element){
+        // var x=document.getElementById("fname").value;
+        var x=element.value;//Work same as input function but it will trigger when we loose the focus from input;
+        document.getElementById("test").innerHTML=x;
+     }
+     function fahad(){//Don't use keyword as a function name.
+        alert("you select some text");
+     }
+    function submitfctn(){
+    var x=document.getElementById("fname").value;
+    alert("Hi!" +" "+ x);
+    }
+
+
+    </script>
+</body>
+</html>

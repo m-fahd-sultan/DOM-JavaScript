@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo soluta minima magni cum, alias magnam molestias incidunt reprehenderit fugiat recusandae officia quisquam totam harum laudantium necessitatibus sapiente ad consequatur minus animi doloribus aspernatur quidem possimus! Hic officiis fugiat voluptas repudiandae eaque cupiditate mollitia? Porro, nemo at! Hic itaque similique at!</div>
+
+    <style>
+        #test{
+            width: 500px;
+            height: 300px;
+            background-color: beige;
+        }
+    </style>
+    <script>
+        var newElement=document.createElement("h2");
+        var newText=document.createTextNode("This is text");
+        newElement.appendChild(newText);//newText will be child of newElement.
+        console.log(newElement);
+
+        document.getElementById("test").appendChild(newElement);//Then we make newElement child of test div.
+        //But with append the text will be the last child in test. TO make first child we use insertBefore.
+
+        var newElement=document.createElement("h2");
+        var newText=document.createTextNode("This is text");
+        newElement.appendChild(newText);
+        var target=document.getElementById("test");
+        target.insertBefore(newElement,target.childNodes[0]);
+        //Here one parameter is for what we want to add and second is for where we want to add this. We set it place with the help of index
+    </script>
+</body>
+</html>

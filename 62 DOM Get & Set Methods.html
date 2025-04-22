@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="header" class="head" style="border: 1px solid black;"><h1>Basic Layout</h1></div>
+        <div class="menu"> 
+            <ul class="list">
+            <li><a href="">Home</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Content</a></li>
+        </ul>
+    </div>
+        <div id="content"><h1>content</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, fugiat tempora sit provident optio voluptates eveniet quisquam, quaerat repellat molestiae perferendis, accusantium laudantium! Adipisci voluptatibus minima vitae quas molestiae ab?</p></div>
+        <div class="sidebar">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Content</a></li>
+            </ul>
+        </div>
+        <div class="footer">@copyright</div>
+    </div>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .wrapper{
+            width: 1000px;
+            border: 2px solid;
+            background-color:white;
+            margin: 0 auto;
+        }
+        .header{
+            background-color: crimson;
+            height: 100px;
+        }
+        .header h1{
+            padding: 30px 0 0 20px;
+        }
+        .menu{
+            background-color: lightsalmon;
+        }
+        .menu ul{
+            margin: 0;
+            padding: 0;
+        }
+        .menu li{
+            display: inline-block;
+        }
+        .menu li a{
+            display: block;
+            padding: 10px 13px;
+            text-decoration: none;
+            color: black;
+        }
+        .content{
+            width: 800px;
+            min-height: 500px;
+            float: left;
+            box-sizing: border-box;
+        }
+        .sidebar{
+            background-color: lightblue;
+            width: 200px;
+            min-height: 500px;
+            float: right;
+        }
+        .sidebar li{
+            display: block;
+        }
+        .sidebar a{
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 10px 13px;
+        }
+        .footer{
+            background-color: lightsalmon;
+            padding: 5px 10px;
+            text-align: right;
+            clear: both;
+        }
+    </style>
+
+<script>
+    var element1,element2;
+    element1=document.getElementById('header').innerText;
+    element2=document.getElementById('content').innerHTML;
+   console.log(element2);
+   /*To get something first we put that in a variable and then we will get that variable.*/
+   /*InnerText return text in tag while innerHTML returns the whole tage with text*/
+
+   var element3;
+   element=document.getElementById('header').getAttribute("style");
+   console.log(element);
+   /*getattribute return us any other attribute value that is used in html by giving that html id.*/
+
+   var element4;
+   element4=document.getElementById("header").getAttributeNode("style");
+   console.log(element4);
+    /*getattributeNode return us any other attribute with name & value that is used in html by giving that html id.*/
+
+    var element5;
+    element5=document.getElementById("header").attributes[1];//Attributes retuens all the attribute in the tag and [1],[2] for the specific tag on this index.
+    console.log(element5);
+</script>
+
+
+</body>
+</html>

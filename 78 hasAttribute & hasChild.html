@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="test"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consequuntur magni nemo incidunt velit nostrum tempore magnam soluta optio dolorem!</p></div>
+
+    <style>
+        #test{
+            width: 500px;
+            height: 200px;
+            background-color: bisque;
+        }
+    </style>
+
+    <script>
+        var target=document.getElementById("test");//target div
+        var find=target.hasAttribute("class");//target has attribute. Its answer will false bcz there is no class in test div 
+        console.log(find);
+
+        var target=document.getElementById("test");//target div
+        var find=target.hasChildNodes();//If there is space in test div that space will be consider as a child and it will return true.
+        console.log(find);
+    </script>
+</body>
+</html>

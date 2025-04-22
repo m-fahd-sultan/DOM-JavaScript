@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner">
+            <div id="a">A</div>
+            <div id="b">B</div>
+            <div id="child-c">C</div>
+        </div>
+    </div>
+
+    <style>
+        #outer{
+            width: 800px;
+            height: 400px;
+            background-color: lightgoldenrodyellow;
+            display: flex;
+        }
+        #inner{
+            width: 400px;
+            height: 200px;
+            background-color: lightseagreen;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        #a{
+            width: 60px;
+            height: 50px;
+            background-color: lightblue;
+            border: 2px solid ;
+            text-align: center;
+        }
+        #b{
+            width: 60px;
+            height: 50px;
+            background-color: lightblue;
+            border: 2px solid ;
+            text-align: center;
+        }
+        #child-c{
+            width: 60px;
+            height: 50px;
+            background-color: lightblue;
+            border: 2px solid ;
+            text-align: center;
+        }
+        </style>
+
+        <script>
+            var a=document.getElementById("inner").children[0];//Will return children of parent element.
+            console.log(a);
+
+           var b=document.getElementById("inner").childNodes;//Will return all the children of inner parent include text and enter everything in inner. 
+           console.log(b);
+
+           document.getElementById("inner").childNodes.style.background='tan';//can style child nodes. can get innerHtml of childNodes.
+        </script>
+</body>
+</html>

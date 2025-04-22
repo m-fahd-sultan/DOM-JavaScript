@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="Name" >Name</label><br>
+        <input type="text" id="fname" onfocus="focusfunction(this)" onblur="blurfunction(this)" oninput="inputfunction(this)"><br>
+
+        <label for="class">Class</label><br>
+        <input type="text" onfocus="focusfunction(this)" onblur="blurfunction(this)" oninput="inputfunction(this)"><br>
+
+        <label for="coutry">Country</label><br>
+        <select name="Option" id="" onfocus="focusfunction(this)" onblur="blurfunction(this)" oninput="inputfunction(this)">
+            <option value="Pakistan">Pakistan</option>
+            <option value="India">India</option>
+            <option value="China">China</option>
+            <option value="Iran">Iran</option>
+        </select>
+    </form>
+    <div id="test" style="border: 1px solid red; height: 150px;" ></div>
+
+
+    <script>
+     /*Keydown, keypress, keyup, focus, blur(), input, change, select, submit, invalid*/
+    //  function focusfunction(){
+    //     document.getElementById("fname").style.background="lime";
+    //  }
+     function focusfunction(element){
+        element.style.background="lime";//with focus the backgroundcolor of input will lime
+     }
+     //we use this refference in html input tags and here we use only one function for them.
+
+     function blurfunction(element){
+        element.style.background="white";//With onblur event when focus goes on another input blur event will reset the first input.
+     }
+
+     function inputfunction(element){
+        // var x=document.getElementById("fname").value;
+        var x=element.value;//input function works when we enter some value in input that value will also written in another div.
+        document.getElementById("test").innerHTML=x;
+     }
+     
+    </script>
+</body>
+</html>

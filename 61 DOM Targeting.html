@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="Header" class="header"><h1>Basic Layout</h1></div>
+        <div class="menu"> 
+            <ul class="list">
+            <li><a href="">Home</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Content</a></li>
+        </ul>
+    </div>
+        <div class="content"><h1>content</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, fugiat tempora sit provident optio voluptates eveniet quisquam, quaerat repellat molestiae perferendis, accusantium laudantium! Adipisci voluptatibus minima vitae quas molestiae ab?</p></div>
+        <div class="sidebar">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Content</a></li>
+            </ul>
+        </div>
+        <div class="footer">@copyright</div>
+    </div>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .wrapper{
+            width: 1000px;
+            border: 2px solid;
+            background-color:white;
+            margin: 0 auto;
+        }
+        .header{
+            background-color: crimson;
+            height: 100px;
+        }
+        .header h1{
+            padding: 30px 0 0 20px;
+        }
+        .menu{
+            background-color: lightsalmon;
+        }
+        .menu ul{
+            margin: 0;
+            padding: 0;
+        }
+        .menu li{
+            display: inline-block;
+        }
+        .menu li a{
+            display: block;
+            padding: 10px 13px;
+            text-decoration: none;
+            color: black;
+        }
+        .content{
+            width: 800px;
+            min-height: 500px;
+            float: left;
+            box-sizing: border-box;
+        }
+        .sidebar{
+            background-color: lightblue;
+            width: 200px;
+            min-height: 500px;
+            float: right;
+        }
+        .sidebar li{
+            display: block;
+        }
+        .sidebar a{
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 10px 13px;
+        }
+        .footer{
+            background-color: lightsalmon;
+            padding: 5px 10px;
+            text-align: right;
+            clear: both;
+        }
+    </style>
+
+
+<script>
+    var element;
+    element=document;//will print all the document in console
+    console.log(element);
+
+    element=document.all;//Will return all the tag in html with index num.
+    console.log(element);
+
+    element=document.all[6];//Will return the tag in html of index 6.
+    console.log(element);
+
+    element=document.head;//Will return head tag in html.
+    console.log(element);
+
+    element=document.links[0];//Will return all the links use in html with there indexs. [0] means link if 0 index.
+    console.log(element);
+
+    element=document.images;//will return images tags with index and lenght.
+    console.log(element);
+
+    element=document.forms;//Will return form tag.
+    console.log(element);
+
+    element=document.doctype;//Will return the document type.
+    console.log(element);
+
+    element=document.URL;//Will return URL of the page.
+    console.log(element);
+
+    element=document.domain;//Will return domain of the page.
+    console.log(element);
+
+    element=document.baseURI;//Will return URL of the page.
+    console.log(element);
+
+    /* ***\\\Targeting Elements by id's and classes///*** */
+
+    element.getElementById("Header");
+    document.getElementByClassName("list");
+    /*There are many tags with same class names to target one element by class name we have to give that element index also e.g document.getElementByClassName("list")[1]; */
+</script>
+</body>
+</html>

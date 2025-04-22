@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test"><h2>This is text</h2>
+    <p id="abc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero neque non officiis quod dolore veniam exercitationem totam quis corporis nemo.</p>
+</div>
+
+<script>
+    var parentElement=document.getElementById("test");
+    var target=document.getElementById("abc");
+    var find=parentElement.contains(target);//.If this tag have any child it will return true.
+    console.log(find);
+</script>
+</body>
+</html>

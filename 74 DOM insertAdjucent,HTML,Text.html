@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="test">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nulla nobis quasi amet commodi laborum obcaecati minus iste asperiores tempore!</div>
+   <style>
+    #test{
+        width: 500px;
+        height: 200px;
+        background-color: tan;
+    }
+   </style>
+   <script>
+    /****\\\InsertAdjacentElement///****/
+    /*beforeBegin
+    afterBegin
+    beforeEnd
+    afterEnd*/
+
+    var newElement=document.createElement("h2");
+    var newText=document.createTextNode("This is text");
+    newElement.appendChild(newText);
+    var target=document.getElementById("test");
+    target.insertAdjacentElement("beforeBegin",newElement);//beforeBegin will add text before the target div.
+   
+    /****\\\InsertAdjacentHTML///****/
+    var target=document.getElementById("test");
+    var newElement="<h2>This is text in h2 tag</h2>";
+    target.insertAdjacentHTML("afterend",newElement);//This is easiar than the first one.
+    //we use insertAdjacentHTML bcz we use tag and text both together in newElement.
+
+    /****\\\InsertAdjacentText///****/
+    var target=document.getElementById("test");
+    var newText=" This is text right after the text in div";
+    target.insertAdjacentText("afterend", newText)
+
+   </script>
+</body>
+</html>
